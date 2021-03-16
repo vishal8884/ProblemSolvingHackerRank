@@ -44,17 +44,12 @@ public class DrawingBook {
 		{
 			list.add(res.length);
 		}
-
 		System.out.println("after :: "+Arrays.toString(res)+"    min value is :: "+min+"    list :: "+list+"   count :: "+count);
-		//System.out.println("len is :: "+res.length+"    list :: "+list);
-		
-		
 		if(res.length>1)
 		{
-			count++;
+        count++;
 		cutTheSticks(res);
 		}
-		
 		int[] narr = new int[list.size()];
 		int g=0;
 		for(int m : list)
