@@ -21,6 +21,7 @@ public class SubArrayDivision {
 	    for(int i=0;i<=s.size()-m;i++)
 	    {
 	    	sum=0;
+	    	//System.out.println("i ::"+i);
 	    	for(int j=i;j<i+m;j++)
 	    	{
 	    		sum = sum + list.get(j);
