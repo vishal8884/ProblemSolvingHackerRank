@@ -4,7 +4,7 @@ public class HackerRankString {
 
 	public static void main(String[] args) {
 
-		String s="vhiaschkaelrvriasnhk";
+		String s="vaihschkaelrvriasnhk";
 		//     s="hackerrank";4   
 		String op=hackerrankInString(s);
 		
