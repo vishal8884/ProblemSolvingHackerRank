@@ -10,7 +10,7 @@ public class RotateArray {
 		int[] arr= {1,2,3,4,5,6,7};
 		int[] arr2= {1,100,3,99};  //expected    {3,99,1,100}
 		
-		rotate(arr,400);
+		rotate(arr,2);
 	}
 	
 	
@@ -18,13 +18,19 @@ public class RotateArray {
 	 {
 		 int n = arr.length; 
 		 
-		 k=k%arr.length;   //this is done so that it does not exceed k value
+		 k=k%arr.length;   //this is done so that it does not exceed k value eg :: if length is samll
 		 
 		 rev(arr,0,n-1);
+		 
+		           System.out.println("rotated array 3:: "+Arrays.toString(arr)+"     k :: "+k);
+		 
 		 rev(arr,0,k-1);
+		 
+		           System.out.println("rotated array 3:: "+Arrays.toString(arr)+"     k :: "+k);
+		 
 		 rev(arr,k,n-1);
 		 
-		 System.out.println("rotated array 3:: "+Arrays.toString(arr)+"     k :: "+k);
+		           System.out.println("rotated array 3:: "+Arrays.toString(arr)+"     k :: "+k);
 	 }
 	
 	
@@ -50,6 +56,7 @@ public class RotateArray {
 	
 	public static void rotateRight(int[] arr,int k)
 	{
+		k=k%arr.length;
 		for(int i=0;i<k;i++)
 		{
 			rightRotateByone(arr);

@@ -26,7 +26,6 @@ public class BestTimeToBuyAndSell {
 			}
 		}
 		
-		System.out.println(profit);
 		return profit;
 	}
 	

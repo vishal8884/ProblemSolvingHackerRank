@@ -32,7 +32,7 @@ public class RemoveDublicatesFromSortedArray {
         	}
         }
 		temp[x]=arr[n-1];
-        System.out.println("temp :: "+Arrays.toString(temp));
+		
         
         Arrays.fill(arr,0);
         
