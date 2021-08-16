@@ -13,7 +13,7 @@ public class SingleNumber {
 
 	}
 
-	public static int singleNumber(int[] arr) 
+	public static int singleNumber(int[] arr)    //to find the single number in array
 	{
         int c=0,res=0,c2=0;
         int n=arr.length;

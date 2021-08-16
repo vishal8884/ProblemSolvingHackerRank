@@ -14,27 +14,27 @@ public class kandaneAlgorithm {
 	
 	public static void kandane(int[] arr)
 	{
-		int min=Integer.MIN_VALUE;
-		int max=0,sum=0;
+		int max_so_far=Integer.MIN_VALUE;
+		int max_ending_here=0,sum=0;
 		
 		System.out.println("arr :: "+Arrays.toString(arr));
 		
 		for(int i=0;i<arr.length;i++)
 		{
-			max=max+arr[i];
+			max_ending_here = max_ending_here + arr[i];
 			
-			if(min<max)
-				min=max;
+			if(max_ending_here>max_so_far)
+				max_so_far=max_ending_here;
 			
-			if(max<0)
+			if(max_ending_here<0)
 			{
-				max=0;
+				max_ending_here=0;
 			}
-			System.out.println("max :: "+max+"   min :: "+min);	
+			System.out.println("max_ending_here :: "+max_ending_here+"   max_so_far :: "+max_so_far);	
 		}
 		
 		
-		System.out.println("res :: "+min);
+		System.out.println("res :: "+max_so_far);
 	}
 
 }

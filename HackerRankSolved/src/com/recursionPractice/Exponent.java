@@ -4,7 +4,7 @@ public class Exponent {
 
 	public static void main(String[] args) {
 
-		getExponent(2, 3);
+		getExponent(2, 5);
 	}
 
 	
@@ -12,10 +12,10 @@ public class Exponent {
 	public static int getExponent(int num,int l)
 	{ 
 		if(l == 0)                        //base case
-			return num;
+			return 1;
 		
 		
-		int sol=(int) (num*getExponent(num,l-1));		     //recursive call
+		int sol=num*getExponent(num,l-1);		     //recursive call
 		
 		System.out.println("num :: "+num+"    exp :: "+l+"    sol :: "+sol);
 		

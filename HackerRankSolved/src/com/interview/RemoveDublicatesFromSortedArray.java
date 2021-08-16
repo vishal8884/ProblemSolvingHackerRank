@@ -21,6 +21,8 @@ public class RemoveDublicatesFromSortedArray {
         if(n==0) return 0;
         if(n==1) return 1;
         
+        //
+        
         int[] temp= new int[n];
         
         for(int i=0;i<arr.length-1;i++)
