@@ -11,7 +11,15 @@ public class sum {
 		
 		System.out.println(123456789%5==0);
 		
+		String s="vishal";
+		String rep=s.replace('l', 'n');
 		
+		System.out.println(rep);
+		
+		
+		char c= 39;
+		
+		System.out.println(c);
 	}
 
 }
