@@ -45,7 +45,7 @@ public class ValidSudoku {
             for (int c = 0; c < N; c++) {
                 char val = board[r][c];
 
-                System.out.println("r :: "+r+"   c :: "+c+"     val :: "+val);
+                
                 
                 // Check if the position is filled with number
                 if (val == '.') {
@@ -70,6 +70,8 @@ public class ValidSudoku {
                     return false;
                 }
                 boxes[idx].add(val);
+                
+                System.out.println("r :: "+r+"   c :: "+c+"     val :: "+val+"   rows[r] ::"+rows[r]+"    cols[c] ::"+cols[c]+"             boxes[idx] ::"+boxes[idx]+"           idx :: "+idx);
             }
         }
         return true;
@@ -77,6 +79,22 @@ public class ValidSudoku {
 	
 	
 	//System.out.println("rows :: "+rows+"      cols :: "+cols+"    boxes :: "+boxes);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	 public static boolean isValidSudokuGrid(char[][] arr)

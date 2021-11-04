@@ -2,23 +2,27 @@ package com.recursionPractice;
 
 public class numberToWords {
 
+	static int c=0;
+	
 	public static void main(String[] args) {
 		
-		getWords(842);
+		getWords(846);
 		
 	}
 	
 	
 	public static void getWords(int n)
 	{
-		
+		c++;
 		if(n==0)
-			return;
-
+			return;         // returns from 8 then 4 and then 6 marked below
+        
 		String[] arr = {"zero" ,"one" ,"two","three","four","five","six","seven","eight","nine"};
 		
-		getWords(n/10);
-		n=n%10;
+		System.out.println(" before number :: "+n%10+"     word :: "+arr[n%10]+"         method called :: "+c+"     n :: "+n);
+		
+		getWords(n/10);               //after 0 return below steps takes place
+//		n=n%10;
 		
         System.out.println("number :: "+n%10+"     word :: "+arr[n%10]);		
 

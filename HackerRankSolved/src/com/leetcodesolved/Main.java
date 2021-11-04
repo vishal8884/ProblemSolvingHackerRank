@@ -15,7 +15,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		int[] arr = {4,3,2,7,8,2,3,1};
-		int[] arr2 = {1,1};
+		int[] arr2 = {1,1};//test
 		findDisappearedNumbers2(arr2);
 
 	}
