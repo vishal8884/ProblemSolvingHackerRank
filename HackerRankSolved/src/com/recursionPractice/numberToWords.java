@@ -15,7 +15,7 @@ public class numberToWords {
 	{
 		c++;
 		if(n==0)
-			return;         // returns from 8 then 4 and then 6 marked below
+			return;         // returns from 8 then 4 and then 6 marked below                        //test
         
 		String[] arr = {"zero" ,"one" ,"two","three","four","five","six","seven","eight","nine"};
 		
