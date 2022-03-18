@@ -37,7 +37,7 @@ public class InsertIntoLinkedList {
 		else
 		{
 			Node last = list.head;
-			//find out the last
+			//interating to find out the last
 			while(last.next !=null)
 			{
 				last = last.next;
