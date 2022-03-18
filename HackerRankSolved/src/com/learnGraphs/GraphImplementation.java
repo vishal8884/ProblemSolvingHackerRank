@@ -3,6 +3,7 @@ package com.learnGraphs;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class GraphImplementation {
 	
@@ -86,6 +87,32 @@ public class GraphImplementation {
 		vis[source]=true;
 		
 		return dfsUtil(source, destination, vis);
+	}
+	
+	public boolean dfsUsingStack(int source,int destination)
+	{
+		boolean[] vis = new boolean[adj.length];
+		vis[source] = true;
+		Stack<Integer> stack = new Stack<Integer>();
+		
+		stack.push(source);
+		
+		while(!stack.isEmpty())
+		{
+			int curr = stack.pop();
+			if(curr == destination)
+				return true;
+			
+			for(int neighbour : adj[curr])
+			{
+				if(!vis[neighbour])
+				{
+					vis[neighbour] = true;
+					stack.push(neighbour);
+				}
+			}
+		}
+		return false;
 	}
 	
 	public static void main(String[] args) {

@@ -3,6 +3,7 @@ package com.learnGraphs;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class Graph2 {
 	
@@ -21,6 +22,56 @@ public class Graph2 {
 	{
 		adj[source].add(destination);
 		adj[destination].add(source);
+	}
+	
+	
+	public boolean dfsUtil(int source,int destination,boolean[] vis)
+	{
+		if(source==destination)    // recursion base case
+			return true;
+		
+		for(int neighbour : adj[source])
+		{
+			boolean isCompleted = dfsUtil(neighbour, destination, vis);
+			if(isCompleted)
+				return true;
+		}
+		
+		return false;
+	}
+	
+	public boolean dfs(int source,int destination)   //checks if we possibility is there
+	{
+		boolean[] vis = new boolean[adj.length];
+		vis[source]=true;
+		
+		return dfsUtil(source, destination, vis);
+	}
+	
+	
+	public boolean dfsUsingStack(int source, int destination)
+	{
+		boolean[] vis = new boolean[adj.length];
+		Stack<Integer> stack = new Stack<>();
+		
+		vis[source]=true;
+		
+		while(!stack.isEmpty())
+		{
+			int curr = stack.pop();
+			if(curr==destination)
+				return true;
+			
+			for(int neighbour : adj[curr])
+			{
+				if(!vis[neighbour])
+				{
+					vis[neighbour] = true;
+					stack.push(neighbour);
+				}
+			}
+		}
+		return false;
 	}
 	
 	public int bfsFindShortestDistance(int source,int destination)
